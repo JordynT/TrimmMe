@@ -1,0 +1,25 @@
+.main {
+	background-color: blue;
+}
+
+.main > div {
+	background-color: white;
+	width: 960px;
+}
+
+.main > div::aside {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+aside {
+	float: left;
+	width: 90px;
+	background-color: yellow;
+}
+
+main {
+	margin-left: 90px;
+	background-color: purple;
+}
