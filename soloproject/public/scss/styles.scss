@@ -4,11 +4,11 @@ Dashboard
 .main {
 	min-height: 445pt;
 	background-color: blue;
-	div{
+	> div{
 		background-color: red;
 		margin: 0 auto;
 		width: 960px;
-		min-height: 565px;
+		min-height: 700px;
 		padding: 2px;
 		&::after {
 			content: '';
@@ -26,7 +26,7 @@ Navigation Side Page
 aside {
 float: left;
 width: 250px;
-min-height: 565px;
+min-height: 700px;
 background-color: yellow;
 padding-bottom: 16px;
 	header {
@@ -41,12 +41,12 @@ Nav routes, titles, and calendar
 ********************/
 	.nav {
 		background-color: gray;
-		font-size: .7em;
+		font-size: 1em;
 		padding-top: 6pt;
 		padding-right: 2pt;
 		border-bottom: 2pt solid black;
 		margin: 3pt;
-		width:40pt;
+		// width:40pt;
 		min-height: 22pt;
 		span {
 			margin-bottom: 10px;
@@ -56,9 +56,9 @@ Nav routes, titles, and calendar
 	}
 	.calendar {
 		background-color: gray;
-		margin-top: 45%;
+		margin-top: 100%;
 		min-height: 155pt;
-		width: 250px;
+		// width: 250px;
 	}
 }
 
@@ -74,9 +74,15 @@ main {
 		height: 60px;
 		background-color: orange;
 		.page-name {
+			float: left;
 			background-color: blue;
 			width: 100px;
-			height: 100px;
+			// height: 100px;
+		}
+		.user {
+			margin-left: 85%;
+			background-color: pink;
+			width: 100px;
 		}
 
 	}
@@ -87,18 +93,18 @@ graph, plans, and inputs
 ********************/
 	.graph {
 		background-color: lightblue;
-		min-height: 200pt;
+		min-height: 240pt;
 		width: 710px;
 	}
 	.plan {
 		background-color: green;
-		min-height: 55pt;
+		min-height: 80pt;
 		width: 710px;
 
 	}
 	.input {
 		background-color: magenta;
-		min-height: 110pt;
+		min-height: 170pt;
 		width: 710px;
 	}
 }

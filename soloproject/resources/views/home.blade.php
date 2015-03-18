@@ -27,9 +27,9 @@
 				<div class="page-name">
 					Home
 				</div>
-				{{-- <div class="user">
+				<div class="user">
 					user-name
-				</div> --}}
+				</div>
 			</header>
 			<div class="graph">
 				graph here!
