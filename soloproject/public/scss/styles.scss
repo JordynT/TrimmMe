@@ -1,0 +1,104 @@
+/*****************************
+Dashboard
+******************************/
+.main {
+	min-height: 445pt;
+	background-color: blue;
+	div{
+		background-color: red;
+		margin: 0 auto;
+		width: 960px;
+		min-height: 565px;
+		padding: 2px;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+}
+
+
+/*******************
+Navigation Side Page
+********************/
+
+aside {
+float: left;
+width: 250px;
+min-height: 565px;
+background-color: yellow;
+padding-bottom: 16px;
+	header {
+		height: 60px;
+		background-color: orange;
+		border-right: 2px solid #ccc;
+		}
+
+
+/*******************
+Nav routes, titles, and calendar
+********************/
+	.nav {
+		background-color: gray;
+		font-size: .7em;
+		padding-top: 6pt;
+		padding-right: 2pt;
+		border-bottom: 2pt solid black;
+		margin: 3pt;
+		width:40pt;
+		min-height: 22pt;
+		span {
+			margin-bottom: 10px;
+			font-size: .7em;
+			display: inline-block;
+		}
+	}
+	.calendar {
+		background-color: gray;
+		margin-top: 45%;
+		min-height: 155pt;
+		width: 250px;
+	}
+}
+
+/*******************
+Main Content
+********************/
+
+main {
+	margin-left: 250px;
+	min-height: 500px;
+	background-color:purple;
+	header {
+		height: 60px;
+		background-color: orange;
+		.page-name {
+			background-color: blue;
+			width: 100px;
+			height: 100px;
+		}
+
+	}
+
+
+/*******************
+graph, plans, and inputs
+********************/
+	.graph {
+		background-color: lightblue;
+		min-height: 200pt;
+		width: 710px;
+	}
+	.plan {
+		background-color: green;
+		min-height: 55pt;
+		width: 710px;
+
+	}
+	.input {
+		background-color: magenta;
+		min-height: 110pt;
+		width: 710px;
+	}
+}
