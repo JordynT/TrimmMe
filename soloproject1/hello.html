@@ -1,0 +1,56 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="http://code.highcharttable.org/master/jquery.highchartTable-min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script>
+		$(document).ready(function() {
+  			$('table.highchart').highchartTable();
+		});
+	</script>
+</head>
+<body>
+	<table class="highchart" data-graph-container-before="1" data-graph-type="line" style="display:none" data-graph-height="400" >
+  <thead>
+      <tr>
+          <th>Days</th>
+          <th>Lbs.</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+          <td>10</td>
+          <td>.5</td>
+      </tr>
+      <tr>
+          <td>20</td>
+          <td>1</td>
+      </tr>
+       <tr>
+          <td>30</td>
+          <td>1.5</td>
+      </tr>
+       <tr>
+          <td>40</td>
+          <td>2</td>
+      </tr>
+       <tr>
+          <td>50</td>
+          <td>2.5</td>
+      </tr>
+  </tbody>
+</table>
+
+	
+</body>
+</html>
+
+
+

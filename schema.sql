@@ -11,7 +11,8 @@ CREATE TABLE user (
     zip_code VARCHAR(64) NOT NULL,
     phone_number VARCHAR (64) DEFAULT NULL,
     remember_token varchar(255),
-    created_at TIMESTAMP
+    created_date DATETIME,
+    updated_date DATETIME
 );
 CREATE TABLE plan (
     plan_id INT AUTO_INCREMENT PRIMARY KEY,

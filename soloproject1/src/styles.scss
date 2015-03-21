@@ -1,0 +1,299 @@
+/****************************************************
+Every Page CSS
+****************************************************/
+
+.page {
+	padding:2px;
+	background-color: blue;
+	height: 100%;
+
+	> header {
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		height: 50px;
+		z-index: 1001;
+		background-color:orange;
+
+		.menu, .location, .user {
+			display: inline-block;
+		}
+		.menu {
+			margin-top: 15px;
+
+			.show-menu {
+				margin: 10px;
+				text-decoration: none;
+				color: black;
+			}
+		}
+		
+		.location {
+			background-color: purple;
+		}
+		.user {
+			background-color: purple;
+			position: fixed;
+  			right: 5px;
+  			top: 15px;
+		}
+
+	}
+}
+
+.primary-menu {
+	position: fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	width:375px;
+	padding-top: 50px;
+	transition: all .5s;
+	transform: translateX(-375px);
+	z-index: 1000;
+	background-color: rgba(0,0,0,0.5);
+	
+	> * + * {
+		margin-top: 12px;
+	}
+
+	> .nav {
+		background-color: yellow;
+		min-height: 30px;
+		border-bottom: 2px solid white;
+			> i {
+				margin-left: 5px;
+			}
+			> span {
+				background-color: blue;
+				color: black;
+			}
+			a {
+				text-decoration: none;
+				color:black;
+			}
+	}
+
+	> .calendar {
+		position: fixed;
+		bottom: 10px;
+		left:15px;
+		right: 15px;
+		min-height: 175px;
+		background-color: pink;
+	}
+
+}
+
+.primary-menu.show {
+	transform: translateX(0);
+}
+
+/***************************
+Dashboard
+***************************/
+
+.graph {
+	background-color: green;
+	margin-top:50px;
+	min-height: 400px;
+}
+
+.information {
+	background-color: grey;
+	min-height:150px;
+	text-align:center;
+
+	> span {
+		background-color: honeydew;
+	}
+	> .info {
+		margin: 0;
+		background-color: maroon;
+		margin-bottom: 5px;
+	}
+}
+
+.dials {
+	background-color: red;
+	min-height: 400px;
+	padding-top: 10px;
+}
+
+.dials > * + * {
+	margin-top: 10px;
+}
+
+.dial {
+	min-height: 100px;
+	margin-bottom: 10px;
+	background-color: pink;
+
+	> div {
+		background-color: green;
+		width: 170px;
+  		margin: 0 auto;
+  		padding-top: 20px;
+
+  		> header {
+  			margin-bottom: 5px;
+  			text-align: center;
+  			background-color: orange;
+
+  		}
+
+
+		input.knob {
+			outline: none;
+		}
+	}
+}
+
+/***************************
+Home/Login
+***************************/
+
+.welcome-image {
+	margin-top: 50px;
+	min-height: 200px; 
+	background-color: green;
+}
+
+.login {
+	min-height: 200px;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: pink;
+	border: 4px solid #000;
+	border-radius: 2px;
+
+	> header {
+		background-color: orange;
+		min-height: 60px;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+
+		> h2 {
+			margin: 0;
+		}
+
+		> span {
+			display: block;
+			padding-top: 15px;
+		}
+	}
+}
+
+
+.form {
+max-width: 400px;
+margin: 0 auto;
+border: 1px solid #ccc;
+background-color: #eee;
+border-radius: 2px;
+overflow:hidden;
+
+	div.input {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #fff;
+	padding: 12px 4px 12px 5px;
+	}
+
+	div.input:first-child {
+	border-top: none;
+
+	}
+
+	div.input:hover i {
+		color:#999;
+	}
+
+	div.input i {
+	color:#aaa;
+	}
+
+	div.input input {
+	margin-left: 5px;
+	outline: none;
+	border:none;
+	background-color: transparent;
+	width: calc(100% - 20px);
+	float: right;
+	color: #222;
+	}
+}
+
+
+button {
+	width: 400px;
+	margin-top: 10px;
+	min-height: 50px;
+}
+
+/***************************
+signup
+***************************/
+
+
+.common-image {
+	margin-top: 50px;
+	min-height: 200px; 
+	background-color: green;
+
+}
+
+/***************************
+New Plan
+***************************/
+
+
+
+
+/***************************
+Adjust Plan
+***************************/
+
+.current-plan {
+	margin-top: 40px;
+
+	.dial-fixed {
+		width: 32.33%;
+		display: inline-block;
+		background-color: blue;
+		text-align: center;
+		
+		h1 {
+			margin: 0;
+		}
+
+	> span {
+		display: inline-block;
+		margin-top: 15%;
+		margin-left: 10%;
+	}
+}
+}
+
+/***************************
+Adjust Plan
+***************************/
+
+.about-us {
+	background-color: pink;
+	padding-top: 10px;
+
+	> p.about {
+		width: 75%;
+		min-height: 120px;
+		margin: 0 auto;
+		background-color: yellow;
+	}
+}

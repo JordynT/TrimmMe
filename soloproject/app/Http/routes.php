@@ -15,6 +15,18 @@ Route::get('/', function (){
 	return view('home');
 });
 
+Route::get('/newPlan', function(){
+	return view('newPlan');
+});
+
+Route::get('/adjustPlan', function(){
+	return view('adjustPlan');
+});
+
+Route::get('/dashboard', function(){
+	return view('dashboard');
+});
+
 // Route::get('home', 'HomeController@index');
 
 Route::controllers([

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="./bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+	<script src="http://code.highcharttable.org/master/jquery.highchartTable-min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/src/main.js"></script>
+</head>
+<body>
+	<div class="page">
+		<aside class="primary-menu">
+				<div class="nav">
+					<i class="fa fa-area-chart"></i>
+					<span><a href="/soloproject/">Dashboard</a></span>
+				</div>
+				<div class="nav">
+					<i class="fa fa-adjust"></i>
+					<span><a href="/soloproject/adjustPlan.html">Adjust your Plan</a></span>
+				</div>
+				<div class="nav">
+					<i class="fa fa-question"></i>
+					<span><a href="/soloproject/about.html">About</a></span>
+				</div>
+				<div class="nav">
+					<i class="fa fa-user-times"></i>
+					<span><a href="#">Sign-out</a></span>
+				</div>
+				<div class="calendar">
+					calendar
+				</div>
+		</aside>
+		<header>
+			<div class="menu">
+				<a class="show-menu" href="#"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="location">
+				"Location"
+			</div>
+			<div class="user">
+				<i class="fa fa-user"></i>
+				<span>"username"</span>
+			</div>
+		</header>
+		<main>
+			<div class="graph">
+				<table class="highchart" data-graph-container-before="1" data-graph-type="line" style="display:none" data-graph-height="375" >
+ 					<thead>
+					    <tr>
+					        <th>Days</th>
+					        <th>Goal</th>
+					        <th>Actual</th>
+
+					    </tr>
+					</thead>
+					<tbody>
+						<tr>
+					        <td>0days</td>
+					        <td>0lbs</td>
+					        <td>0lbs</td>
+				     	</tr>
+				    	<tr>
+					        <td>10days</td>
+					        <td>.5lbs</td>
+					        <td>.5lbs</td>
+				     	</tr>
+				    	<tr>
+					        <td>20day</td>
+					        <td>1lbs</td>
+					        <td>.7lbs</td>
+				     	</tr>
+				    	<tr>
+				        	<td>30days</td>
+				        	<td>1.5lbs</td>
+				        	<td>1 lbs</td>
+				      	</tr>
+				       	<tr>
+				          	<td>40day</td>
+				          	<td>2lbs</td>
+				          	<td>1.6lbs</td>
+				      	</tr>
+				       	<tr>
+				          	<td>50days</td>
+				          	<td>2.5lbs</td>
+				          	<td>2.2lbs</td>
+				      	</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="information">
+				<span>Actual Plan:</span>
+				<p class="info">You are planned to lose "weight here" in "days here" which is "x days over/under" your plan. </p>
+				<span>Original Plan:</span>
+				<p class="info">You planned to lose "weight here" by "date here"</p> 
+			</div>
+			<div class="dials">
+				<div class="dial">
+					<div>
+						<header>Your current weight in lbs.</header>
+						<input type="text" value="100"class="knob" data-width="150"
+						data-thickness=".3" data-min="100" data-max="350" data-cursor=true>
+					</div>
+				</div>
+				<div class="dial">
+					<div> 
+						<header>Input your caloric intake since your last entry</header>
+						<input type="text" value="20"class="knob" data-width="150"
+						data-thickness=".3" data-step="10" data-min="20" data-max="1500" data-cursor=true>
+					</div>
+				</div>
+				<div class="dial">
+					<div> 
+						<header>Input your caloric expenditure since your last entry</header>
+						<input type="text" value="20"class="knob" data-width="150"
+						data-thickness=".3" data-step="10" data-min="20" data-max="1000" data-cursor=true>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+</body>
+</html>

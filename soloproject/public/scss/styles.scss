@@ -10,11 +10,11 @@ Dashboard
 		width: 960px;
 		min-height: 700px;
 		padding: 2px;
-		&::after {
-			content: '';
-			display: block;
-			clear: both;
-		}
+		// &::after {
+		// 	content: '';
+		// 	display: block;
+		// 	clear: both;
+		// }
 	}
 }
 
@@ -25,11 +25,10 @@ Navigation Side Page
 
 aside {
 float: left;
-width: 250px;
+width: 300px;
 min-height: 700px;
 background-color: yellow;
-padding-bottom: 16px;
-	header {
+	> header {
 		height: 60px;
 		background-color: orange;
 		border-right: 2px solid #ccc;
@@ -56,7 +55,7 @@ Nav routes, titles, and calendar
 	}
 	.calendar {
 		background-color: gray;
-		margin-top: 100%;
+		margin-top: 80%;
 		min-height: 155pt;
 		// width: 250px;
 	}
@@ -66,18 +65,25 @@ Nav routes, titles, and calendar
 Main Content
 ********************/
 
-main {
-	margin-left: 250px;
-	min-height: 500px;
-	background-color:purple;
-	header {
+ // main{
+	// margin-left: 250px;
+	// min-height: 500px;
+	// background-color:purple;
+.main > div {
+	> header {
 		height: 60px;
 		background-color: orange;
+		text-align: center;
 		.page-name {
 			float: left;
 			background-color: blue;
 			width: 100px;
 			// height: 100px;
+		}
+		.menu {
+			float: left;
+			background-color: pink;
+			width: 100px;
 		}
 		.user {
 			margin-left: 85%;
@@ -91,20 +97,66 @@ main {
 /*******************
 graph, plans, and inputs
 ********************/
-	.graph {
+	.visual {
 		background-color: lightblue;
 		min-height: 240pt;
-		width: 710px;
+		// width: 710px;
 	}
 	.plan {
 		background-color: green;
 		min-height: 80pt;
-		width: 710px;
+		// width: 710px;
 
 	}
 	.input {
 		background-color: magenta;
 		min-height: 170pt;
-		width: 710px;
+		// width: 710px;
 	}
+/*****************************
+New Plan
+******************************/
+	.new-plan {
+		background-color: orange;
+		min-height: 180pt;
+		margin-top: 60pt;
+		}
+/*****************************
+Adjust Plan
+******************************/
+	.data {
+		background-color: green;
+		min-height: 150px;
+		margin-top: 40px;
+	}
+
+/*****************************
+Home
+******************************/
+	.welcome-image {
+		background-color: green;
+		min-height: 175pt;
+	}
+	.login {
+		background-color:pink;
+		min-height: 225pt;
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 44pt;
+
+		> header{
+			background-color: maroon;
+			text-align: center;
+		}
+
+		> .form {
+			background-color: gray;
+			width: 55%;
+			min-height: 70pt;
+			margin: 0 auto;
+			margin-top: 25%;
+
+		}
+	}
+
 }
