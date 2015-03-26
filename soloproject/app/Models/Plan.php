@@ -3,7 +3,36 @@ namespace App\Models;
 use DB;
 use App\Library\SQL\Sql;
 
-class User extends Model {
-    protected static $table = 'user';
-    protected static $key = 'user_id';
+class Plan extends Model {
+    protected static $table = 'plan';
+    protected static $key = 'plan_id';
+
+     // protected static $table = 'plan_adjustment';
+     // protected static $key = 'plan_adjustment_id';
+
+    static function getPlan($user_id) {
+
+    	$sql = "
+    			SELECT plan_id,
+    			start_date, num_days, start_weight,
+    			lose_weight
+    			FROM plan
+    			WHERE user_id = :user_id
+    			";
+    	$plan = DB::select($sql, [':user_id' => $user_id]);
+    	return $plan[0];
+
+    }
+
+    static function removePlan($user_id) {
+    	$sql = "
+    			DELETE from plan
+    			WHERE user_id = :user_id
+    			";
+    	DB::delete($sql, [':user_id' => $user_id]);
+    }
+
+
+
+
 }

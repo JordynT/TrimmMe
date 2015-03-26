@@ -11,21 +11,50 @@
 |
 */
 
-Route::get('/', function (){
-	return view('home');
+Route::get('/', function(){
+	return view('auth/login');
 });
+
+
+//About Page//
+
+Route::get('/about', function(){
+	return view('about');
+});
+
+// Route::get('home', 'HomeController@index');
+
+
+
+/********************
+	TEST
+*********************/
+
+Route::get('/test', 'CheckinController@grabCheckin');
+
+
+
+//NEW PLAN//
+
 
 Route::get('/newPlan', function(){
 	return view('newPlan');
 });
 
+Route::get('/insertNewPlan', 'PlanController@newPlan');
+
 Route::get('/adjustPlan', function(){
 	return view('adjustPlan');
 });
 
-Route::get('/dashboard', function(){
-	return view('dashboard');
-});
+//DASHBOARD//
+
+Route::get('/dashboard', 'DashboardController@viewDash');
+
+//CHECKIN//
+
+Route::get('/insertCheckin', 'CheckinController@newCheckin');
+
 
 // Route::get('home', 'HomeController@index');
 
