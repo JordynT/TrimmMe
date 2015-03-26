@@ -13,6 +13,11 @@ class PlanController Extends Controller {
 	public function __construct(){
 		$this->middleware('auth');
 	}
+
+
+	public function view(){
+		return view('newPlan');
+	}
 	
 
 	public function newPlan() {

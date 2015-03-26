@@ -30,4 +30,12 @@ class Checkin extends Model {
     	DB::delete($sql, [':plan_id' => $plan_id]);
     }
 
+
+    static function calorieToPound($caloric_intake, $caloric_output, $rmr){
+		$delta = $caloric_output - ($caloric_intake - $rmr) ;
+		$pounds = $delta/3500;
+
+		return $pounds;
+	}
+
 }

@@ -37,9 +37,7 @@ Route::get('/test', 'CheckinController@grabCheckin');
 //NEW PLAN//
 
 
-Route::get('/newPlan', function(){
-	return view('newPlan');
-});
+Route::get('/newPlan', 'PlanController@view');
 
 Route::get('/insertNewPlan', 'PlanController@newPlan');
 
