@@ -30,7 +30,7 @@ Route::get('/about', function(){
 	TEST
 *********************/
 
-Route::get('/test', 'CheckinController@grabCheckin');
+Route::get('/test', 'DashboardController@viewDash');
 
 
 

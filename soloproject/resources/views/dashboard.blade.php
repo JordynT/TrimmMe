@@ -16,50 +16,32 @@
 		    </tr>
 		</thead>
 		<tbody>
-				@for($d=0; $d <= $plan->num_days; $d+=10)
-					{{-- <tr>
-						<td>{{$d}} days</td>
-				        <td>{{number_format($d*$plan->lose_weight/$plan->num_days,2)}}</td>
-				        <td>10</td>
-			        </tr>
-			    --}}
-			    @endfor
-	    	<tr>
-		        <td>1</td>
-		        <td>.2</td>
-		        <td>0</td>
-	     	</tr>
-	     	<tr>
-		        <td>2</td>
-		        <td>.4</td>
-		        <td>0</td>
-	     	</tr>
-	     	<tr>
-		        <td>3</td>
-		        <td>.6</td>
-		        <td>.5</td>
-	     	</tr>
-	     	<tr>
-		        <td>4</td>
-		        <td>.8</td>
-		        <td>.7</td>
-	     	</tr>
-	     	<tr>
-		        <td>5</td>
-		        <td>1.0</td>
-		        <td>0.7</td>
-	     	</tr>
-	     	<tr>
-		        <td>6</td>
-		        <td>1.2</td>
-		        <td>1.2</td>
-	     	</tr>
-	     	<tr>
-		        <td>7</td>
-		        <td>1.4</td>
-		        <td>1.2</td>
-	     	</tr>
-	    	
+
+			<?php $j =0; ?>
+			@if(count($Cummulitive) > 100)
+				@foreach($Cummulitive as $key => $checkin)
+					@if($j==9)
+
+						<tr>
+						<td>{{number_format($checkin['day'], 2)}}</td>
+						<td>{{number_format($checkin['goal_pounds'], 2)}}</td>
+						<td>{{$checkin['actual_pounds']}}</td>
+						</tr>
+					
+					<?php $j=0; ?>
+					@endif
+					<?php $j++; ?>
+				@endforeach
+			@else
+				@foreach($Cummulitive as $checkin)
+					<tr>
+						<td>{{$checkin['day']}}</td>
+						<td>{{$checkin['goal_pounds']}}</td>
+						<td>{{$checkin['actual_pounds']}}</td>
+					</tr>
+				@endforeach
+			@endif
+		
 		</tbody>
 	</table>
 </div>
@@ -76,7 +58,7 @@
 		<div class="dial">
 			<div>
 				<header>Your current weight in lbs.</header>
-				<input type="text" name="current_weight" value="{{$check_in->current_weight}}" class="knob" data-width="150"
+				<input type="text" name="current_weight" value="100" class="knob" data-width="150"
 				data-thickness=".3" data-min="100" data-max="350" data-cursor=true>
 			</div>
 		</div>
@@ -97,4 +79,5 @@
 		<button>Submit</button>
 	</form>
 </div>
+
 @endsection
