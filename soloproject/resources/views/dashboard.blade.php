@@ -19,7 +19,7 @@
 
 			<?php $j =0; ?>
 			@if(count($Cummulitive) > 100)
-				@foreach($Cummulitive as $key => $checkin)
+				@foreach($Cummulitive as $checkin)
 					@if($j==9)
 
 						<tr>
