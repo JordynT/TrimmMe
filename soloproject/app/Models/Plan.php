@@ -7,9 +7,6 @@ class Plan extends Model {
     protected static $table = 'plan';
     protected static $key = 'plan_id';
 
-     // protected static $table = 'plan_adjustment';
-     // protected static $key = 'plan_adjustment_id';
-
     static function getPlan($user_id) {
 
     	$sql = "
@@ -20,6 +17,7 @@ class Plan extends Model {
     			WHERE user_id = :user_id
     			";
     	$plan = DB::select($sql, [':user_id' => $user_id]);
+
     	return $plan[0];
 
     }
@@ -33,6 +31,26 @@ class Plan extends Model {
     }
 
 
+    public function getAdjustment(){
+
+        $sql = "
+                SELECT * 
+                FROM plan_adjustment
+                WHERE plan_id = :plan_id
+                ";
+        $row = DB::select($sql, [':plan_id' => $this->plan_id]);
+
+        if($row) {
+
+            $adjustment = new AdjustPlan($row[0]->plan_adjustment_id);
+            
+            return $adjustment;
+        }
+
+        return NULL;
+
+
+    }
 
 
 }

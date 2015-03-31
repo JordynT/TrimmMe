@@ -1,9 +1,14 @@
 /****************************************************
+Variables
+****************************************************/
+/****************************************************
 Every Page CSS
 ****************************************************/
+body {
+  font-family: Numans; }
+
 .page {
   padding: 2px;
-  background-color: blue;
   height: 100%; }
   .page > header {
     position: fixed;
@@ -12,19 +17,17 @@ Every Page CSS
     right: 0;
     height: 50px;
     z-index: 1001;
-    background-color: orange; }
+    background-color: rgba(221, 221, 221, 0.5); }
     .page > header .menu, .page > header .location, .page > header .user {
-      display: inline-block; }
+      display: inline-block;
+      color: #104C4C; }
     .page > header .menu {
       margin-top: 15px; }
       .page > header .menu .show-menu {
         margin: 10px;
         text-decoration: none;
         color: black; }
-    .page > header .location {
-      background-color: purple; }
     .page > header .user {
-      background-color: purple;
       position: fixed;
       right: 5px;
       top: 15px; }
@@ -43,28 +46,35 @@ Every Page CSS
   -ms-transform: translateX(-375px);
   transform: translateX(-375px);
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5); }
-  .primary-menu > * + * {
+  background-color: rgba(47, 45, 45, 0.9); }
+  .primary-menu .nav:first-child {
     margin-top: 12px; }
+  .primary-menu .nav:last-child {
+    border-bottom: 1px solid #aaa; }
   .primary-menu > .nav {
-    background-color: yellow;
     min-height: 30px;
-    border-bottom: 2px solid white; }
+    width: 90%;
+    margin: 0;
+    margin-left: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #aaa; }
     .primary-menu > .nav > i {
-      margin-left: 5px; }
+      margin-left: 5px;
+      color: #aaa; }
     .primary-menu > .nav > span {
-      background-color: blue;
-      color: black; }
+      color: #aaa; }
     .primary-menu > .nav a {
       text-decoration: none;
-      color: black; }
-  .primary-menu > .calendar {
+      color: #aaa; }
+  .primary-menu .nav:hover {
+    background-color: rgba(113, 110, 110, 0.9);
+    border-top: 1px solid #88CCCC; }
+  .primary-menu .calendar {
     position: fixed;
     bottom: 10px;
     left: 15px;
     right: 15px;
-    min-height: 175px;
-    background-color: pink; }
+    min-height: 175px; }
 
 .primary-menu.show {
   -webkit-transform: translateX(0);
@@ -75,23 +85,35 @@ Every Page CSS
 Dashboard
 ***************************/
 .graph {
-  background-color: green;
+  border-top: 2px solid rgba(0, 0, 0, 0.48);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.48);
   margin-top: 50px;
-  min-height: 400px; }
+  min-height: 375px; }
+  .graph .table {
+    border: 4px solid black; }
 
 .information {
-  background-color: grey;
-  min-height: 150px;
-  text-align: center; }
-  .information > span {
-    background-color: honeydew; }
+  min-height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(221, 221, 221, 0.8);
+  text-align: center;
+  font-size: .9em; }
   .information > .info {
-    margin: 0;
-    background-color: maroon;
-    margin-bottom: 5px; }
+    margin-bottom: 15px; }
+    .information > .info > span {
+      color: #104C4C;
+      font-size: 2em; }
+    .information > .info > .plan-info {
+      margin: 0;
+      color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 5px; }
+      .information > .info > .plan-info > strong {
+        color: #5EA3A3; }
+      .information > .info > .plan-info p {
+        margin-bottom: 10px; }
 
 .dials {
-  background-color: red;
   min-height: 400px;
   padding-top: 10px; }
   .dials button {
@@ -103,17 +125,16 @@ Dashboard
 
 .dial {
   min-height: 100px;
-  margin-bottom: 10px;
-  background-color: pink; }
+  margin-bottom: 10px; }
   .dial > div {
-    background-color: green;
     width: 170px;
     margin: 0 auto;
     padding-top: 20px; }
     .dial > div > header {
       margin-bottom: 5px;
       text-align: center;
-      background-color: orange; }
+      border-radius: 2px;
+      background-color: rgba(137, 136, 136, 0.71); }
     .dial > div input.knob {
       outline: none; }
 
@@ -177,7 +198,8 @@ Home/Login
     color: #222; }
 
 button {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin-top: 10px;
   min-height: 50px; }
 

@@ -22,6 +22,7 @@ class Checkin extends Model {
     	return $check_in;
     }
 
+
     static function removeCheckin($plan_id) {
     	$sql = "
     			DELETE from check_in

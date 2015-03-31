@@ -15,7 +15,7 @@
 		        <th>Actual</th>
 		    </tr>
 		</thead>
-		<tbody>
+		<tbody class="body">
 
 			<?php $j =0; ?>
 			@if(count($Cummulitive) > 100)
@@ -46,34 +46,39 @@
 	</table>
 </div>
 <div class="information">
-	<span>Actual Plan:</span>
-	<p class="info">You are planned to lose "weight here" in "days here" which is "x days over/under" your plan. </p>
-	<span>Original Plan:</span>
-	<p class="info">You planned to lose {{$plan->lose_weight}} pounds in {{$plan->num_days}} days.</p> 
+	<div class="info">
+		<span class="actual">Actual Plan:</span>
+		<p class="plan-info">You are planned to lose <strong>5 pounds</strong> in <strong>21 days</strong> which is <strong>under</strong> your plan. </p>
+	</div>
+	<div class="info">
+		<span class="original">Original Plan:</span>
+		<p class="plan-info">You planned to lose <strong>{{$plan->lose_weight}} pounds</strong> in <strong>{{$plan->num_days}} days</strong>.</p> 
+	</div>
 </div>
 <div class="dials">
-	<form action="/insertCheckin">
-		<input type="hidden" name="plan_id" value="{{$plan->plan_id}}">
+	<form action="/insertCheckin" class="check-in">
+		<input type="hidden" class="plan-id" name="plan_id" value="{{$plan->plan_id}}">
 
-		<div class="dial">
+		{{-- <div class="dial">
 			<div>
 				<header>Your current weight in lbs.</header>
-				<input type="text" name="current_weight" value="100" class="knob" data-width="150"
+				<input type="text" name="current_weight" value="{{$ch" class="knob" data-width="150"
 				data-thickness=".3" data-min="100" data-max="350" data-cursor=true>
 			</div>
-		</div>
+		</div> --}}
 		<div class="dial">
 			<div> 
 				<header>Input your caloric intake since your last entry</header>
-				<input type="text" name="caloric_intake" value="20" class="knob" data-width="150"
-				data-thickness=".3" data-step="10" data-min="20" data-max="1500" data-cursor=true>
+				<input type="text" name="caloric_intake" value="20" class="knob caloric-intake" data-width="170"
+				data-thickness=".3" data-step="10" data-min="20" data-max="1500" data-cursor=true        data-fgColor="#88CCCC" data-bgColor="#104C4C">
 			</div>
 		</div>
 		<div class="dial">
 			<div> 
 				<header>Input your caloric expenditure since your last entry</header>
-				<input type="text" name="caloric_output" value="20" class="knob" data-width="150"
-				data-thickness=".3" data-step="10" data-min="20" data-max="1000" data-cursor=true>
+				<input type="text" name="caloric_output" value="20" class="knob caloric-output" data-width="170"
+				data-thickness=".3" data-step="10" data-min="20" data-max="1000" data-cursor=true 
+				data-fgColor="#88CCCC" data-bgColor="#104C4C">
 			</div>
 		</div>
 		<button>Submit</button>

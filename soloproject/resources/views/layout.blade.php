@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
 	<link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Gruppo|Numans' rel='stylesheet' type='text/css'>
 
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="{{ URL::asset('/bower_components/jquery-knob/js/jquery.knob.js') }}"></script>
@@ -36,7 +37,7 @@
 					<span><a href="/auth/logout">Sign-out</a></span>
 				</div>
 				<div class="calendar">
-					calendar
+					<img src="/images/calendar.jpg">
 				</div>
 			@else 
 				<div class="nav">
@@ -48,7 +49,7 @@
 					<span><a href="/about">About</a></span>
 				</div>
 				<div class="calendar">
-					calendar
+					
 				</div>
 			@endif
 

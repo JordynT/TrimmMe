@@ -3,6 +3,7 @@ use DB;
 use Request;
 use Auth;
 use App\Models\Plan;
+use App\Models\AdjustPlan;
 use App\Models\Checkin;
 // use App\Models\User;
 use App\User;
@@ -48,6 +49,32 @@ class PlanController Extends Controller {
 	
 		return redirect('dashboard');
 		
+	}
+
+
+	public function viewAdjustPlan() {
+		$user_id = Auth::user()->user_id;
+
+		$plan = Plan::getPlan($user_id);
+
+		return view('adjustPlan', ['plan' => $plan]);
+	}
+
+
+	public function insertAdjustPlan() {
+		$plan_id = Request::input('plan_id');
+
+		AdjustPlan::removeAdjustPlan($plan_id);
+
+		$plan_adjust = new AdjustPlan();
+		$plan_adjust->plan_id = $plan_id;
+		$plan_adjust->adjustment_date = date("Y-m-d");
+		$plan_adjust->current_weight = Request::input('current_weight');
+		$plan_adjust->end_weight = Request::input("end_weight");
+		$plan_adjust->num_days = Request::input("num_days");
+		$plan_adjust_id = $plan_adjust->save();
+
+		return ('dashboard');
 	}
 
 }	

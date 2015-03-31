@@ -41,17 +41,25 @@ Route::get('/newPlan', 'PlanController@view');
 
 Route::get('/insertNewPlan', 'PlanController@newPlan');
 
-Route::get('/adjustPlan', function(){
-	return view('adjustPlan');
-});
+
 
 //DASHBOARD//
 
 Route::get('/dashboard', 'DashboardController@viewDash');
 
+
 //CHECKIN//
 
 Route::get('/insertCheckin', 'CheckinController@newCheckin');
+
+
+
+//Adjust Plan//
+
+Route::get('/adjustPlan', 'PlanController@viewAdjustPlan');
+Route::get('/insertAdjustPlan', 'PlanController@insertAdjustPlan');
+
+
 
 
 // Route::get('home', 'HomeController@index');
