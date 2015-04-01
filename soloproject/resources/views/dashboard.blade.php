@@ -48,7 +48,7 @@
 <div class="information">
 	<div class="info">
 		<span class="actual">Actual Plan:</span>
-		<p class="plan-info">At your current daily rate, you will reach your goal of losing <strong> @if($plan_adjustment){{$plan_adjustment->end_weight}} @else {{$plan->lose_weight}} @endif pounds</strong> in a total of <strong>21 days</strong>, which is <strong>under</strong> your plan. </p>
+		<p class="plan-info">At your current daily rate, you will reach your goal of losing <strong> @if($plan_adjustment){{$plan_adjustment->end_weight}} @else {{$plan->lose_weight}} @endif pounds</strong> in a total of <strong>25 days</strong>, which is <strong>under</strong> your plan. </p>
 	</div>
 	@if($plan_adjustment)
 		<div class="info">

@@ -22,12 +22,11 @@ class DashboardController Extends Controller {
 	This code needs to convert dates, days, calories, and pounds. 
 	*************************************************************/
 	public function viewDash(){
-		//Grabs user, and all their information//
+
 		$user = Auth::user();
 		$user_id = $user->user_id;
 		$rmr = $user->rmr;
 
-		//Grabs plan, and all of it's information//
 		$plan = new Plan($user_id);
 		$plan_id = $plan->plan_id;
 		$start_date = $plan->start_date;
@@ -46,7 +45,6 @@ class DashboardController Extends Controller {
 			$adjust_day = $this->convertDateToDay($adjust_date, $c_start_date);
 		} 
 
-		//This calls to the method
 		$checkin_array = $this->getCheckin($plan_id, $rmr);
 
 		//Creating new variables
@@ -63,8 +61,6 @@ class DashboardController Extends Controller {
 			
 			$this_date = $this->convertDayToDate($day, $start_date);
 
-			/*if the plan adjustment exists check if it's greater than adjustment day or less than
-			and change variables accordingly.*/
 			if($plan_adjustment) {
  				 
 				if($day <= $adjust_day) {
@@ -137,7 +133,6 @@ class DashboardController Extends Controller {
 	pounds
 	*************************************************************/
 	private function getActualPounds($search_date, $checkin_array) {
-		//$search_date = $this->convertDayToDate($day, $start_date);
 		$actual_pounds = 0;
 
 		foreach($checkin_array as $item) {

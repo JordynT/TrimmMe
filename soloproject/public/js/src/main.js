@@ -11,7 +11,6 @@ $(function(){
 	$('.show-menu').on("click", function (event) {
 		event.preventDefault();
 		$('.primary-menu').toggleClass("show");
-		// console.log('click');
 
 	});
 
@@ -32,7 +31,7 @@ $(function(){
 	*************************************************************/
 	$('table.highchart')
   .bind('highchartTable.beforeRender', function(event, highChartConfig) {
-    highChartConfig.colors = ['#104C4C', '#88CCCC', 'orange', 'red', 'pink', 'yellow'];
+    highChartConfig.colors = ['#104C4C', '#88CCCC'];
   })
   .highchartTable();
 
