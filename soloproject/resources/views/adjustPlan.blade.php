@@ -7,7 +7,9 @@
 @section('main-content')
 <div class="dials">
 	<div class="dial current-plan">
-		<div class="dial-fixed">
+
+		<span>Adjust your Plan</span>
+		{{-- <div class="dial-fixed">
 			<h1>150</h1>
 			<span>lbs. in weight</span>
 		</div>
@@ -18,7 +20,7 @@
 		<div class="dial-fixed">
 			<h1>72</h1>
 			<span>days left</span>
-		</div>
+		</div> --}}
 	</div>
 	<form action="/insertAdjustPlan">
 		<input type="hidden" name="plan_id" value="{{$plan->plan_id}}">

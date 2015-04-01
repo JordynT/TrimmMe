@@ -144,7 +144,9 @@ Home/Login
 .welcome-image {
   margin-top: 50px;
   min-height: 200px;
-  background-color: green; }
+  background-image: url("/images/signup-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .login {
   min-height: 200px;
@@ -155,15 +157,14 @@ Home/Login
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: pink;
   border: 4px solid #000;
   border-radius: 2px; }
   .login > header {
-    background-color: orange;
     min-height: 60px;
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    color: #5EA3A3; }
     .login > header > h2 {
       margin: 0; }
     .login > header > span {
@@ -184,11 +185,11 @@ Home/Login
   .form div.input:first-child {
     border-top: none; }
   .form div.input:hover i {
-    color: #999; }
+    color: #5EA3A3; }
   .form div.input i {
     color: #aaa; }
   .form div.input input {
-    margin-left: 5px;
+    margin-left: 4px;
     outline: none;
     border: none;
     background-color: transparent;
@@ -201,15 +202,22 @@ button {
   width: 100%;
   max-width: 400px;
   margin-top: 10px;
-  min-height: 50px; }
+  min-height: 50px;
+  background-color: #88CCCC; }
+
+a.forgot-password {
+  text-decoration: none;
+  color: #104C4C; }
 
 /***************************
 signup
 ***************************/
 .common-image {
   margin-top: 50px;
-  min-height: 200px;
-  background-color: green; }
+  min-height: 300px;
+  background-image: url("/images/register.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }
 
 /***************************
 New Plan
@@ -218,18 +226,12 @@ New Plan
 Adjust Plan
 ***************************/
 .current-plan {
-  margin-top: 40px; }
-  .current-plan .dial-fixed {
-    width: 32.33%;
-    display: inline-block;
-    background-color: blue;
-    text-align: center; }
-    .current-plan .dial-fixed h1 {
-      margin: 0; }
-    .current-plan .dial-fixed > span {
-      display: inline-block;
-      margin-top: 15%;
-      margin-left: 10%; }
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center; }
+  .current-plan > span {
+    color: #104C4C;
+    font-size: 2em; }
 
 /***************************
 Adjust Plan

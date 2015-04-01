@@ -7,7 +7,7 @@
 @section('main-content')
 
 <div class="welcome-image">
-	welcome here pic
+	{{-- welcome here pic --}}
 </div>
 
 @if (count($errors) > 0)
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<button>Login</button><br>
-		<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+		<a class="forgot-password" href="{{ url('/password/email') }}">Forgot Your Password?</a>
 	</form>
 </div>
 

@@ -216,7 +216,9 @@ Home/Login
 .welcome-image {
 	margin-top: 50px;
 	min-height: 200px; 
-	background-color: green;
+	background-image: url("/images/signup-image.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .login {
@@ -228,16 +230,17 @@ Home/Login
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
-	background-color: pink;
+	//background-color: pink;
 	border: 4px solid #000;
 	border-radius: 2px;
 
 	> header {
-		background-color: orange;
+		//background-color: orange;
 		min-height: 60px;
 		max-width: 600px;
 		margin: 0 auto;
 		margin-bottom: 10px;
+		color: $middle_blue;
 
 		> h2 {
 			margin: 0;
@@ -271,7 +274,7 @@ overflow:hidden;
 	}
 
 	div.input:hover i {
-		color:#999;
+		color:$middle_blue;
 	}
 
 	div.input i {
@@ -279,7 +282,7 @@ overflow:hidden;
 	}
 
 	div.input input {
-	margin-left: 5px;
+	margin-left: 4px;
 	outline: none;
 	border:none;
 	background-color: transparent;
@@ -287,6 +290,7 @@ overflow:hidden;
 	float: right;
 	color: #222;
 	}
+
 }
 
 
@@ -295,7 +299,13 @@ button {
 	max-width: 400px;
 	margin-top: 10px;
 	min-height: 50px;
+	background-color: $light_color;
 }
+
+a.forgot-password {
+		text-decoration: none;
+		color: $dark_color;
+	}
 
 /***************************
 signup
@@ -304,8 +314,10 @@ signup
 
 .common-image {
 	margin-top: 50px;
-	min-height: 200px; 
-	background-color: green;
+	min-height: 300px; 
+	background-image: url("/images/register.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 
 }
 
@@ -322,23 +334,14 @@ Adjust Plan
 
 .current-plan {
 	margin-top: 40px;
-
-	.dial-fixed {
-		width: 32.33%;
-		display: inline-block;
-		background-color: blue;
-		text-align: center;
-		
-		h1 {
-			margin: 0;
-		}
+	padding-top: 20px;
+	text-align: center;
 
 	> span {
-		display: inline-block;
-		margin-top: 15%;
-		margin-left: 10%;
+
+		color: $dark_color;
+		font-size: 2em;	
 	}
-}
 }
 
 /***************************

@@ -50,6 +50,12 @@
 		<span class="actual">Actual Plan:</span>
 		<p class="plan-info">At your current daily rate, you will reach your goal of losing <strong> @if($plan_adjustment){{$plan_adjustment->end_weight}} @else {{$plan->lose_weight}} @endif pounds</strong> in a total of <strong>21 days</strong>, which is <strong>under</strong> your plan. </p>
 	</div>
+	@if($plan_adjustment)
+		<div class="info">
+		<span class="actual">Adjusted Plan:</span>
+		<p class="plan-info">You adjusted your plan to lose <strong>{{$plan_adjustment->end_weight}} pounds</strong> in a total of <strong>{{$plan_adjustment->num_days}} days</strong>.</p>
+		</div>
+	@endif
 	<div class="info">
 		<span class="original">Original Plan:</span>
 		<p class="plan-info">You planned to lose <strong>{{$plan->lose_weight}} pounds</strong> in <strong>{{$plan->num_days}} days</strong>.</p> 
@@ -58,14 +64,6 @@
 <div class="dials">
 	<form action="/insertCheckin" class="check-in">
 		<input type="hidden" class="plan-id" name="plan_id" value="{{$plan->plan_id}}">
-
-		{{-- <div class="dial">
-			<div>
-				<header>Your current weight in lbs.</header>
-				<input type="text" name="current_weight" value="{{$ch" class="knob" data-width="150"
-				data-thickness=".3" data-min="100" data-max="350" data-cursor=true>
-			</div>
-		</div> --}}
 		<div class="dial">
 			<div> 
 				<header>Input your caloric intake since your last entry</header>

@@ -7,7 +7,7 @@
 @section('main-content')
 
 <div class="common-image">
-	welcome here pic
+	
 </div>
 
 @if (count($errors) > 0)
@@ -55,8 +55,8 @@
 				<input type="password" class="password" placeholder="Re-enter password" name="password_confirmation">
 			</div>
 			<div class="input">
-				<i class="fa fa-map-marker"></i>
-				<input type="text" name="rmr" class="zip" placeholder="Resting Metabolic Rate" value="{{ old('zip_code') }}">
+				<i class="fa fa-heartbeat"></i>
+				<input type="text" name="rmr" class="rmr" placeholder="Resting Metabolic Rate" value="{{ old('zip_code') }}">
 			</div>
 		</div>
 		<button>Sign up!</button>
