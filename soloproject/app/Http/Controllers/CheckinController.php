@@ -10,6 +10,11 @@ use App\User;
 
 class CheckinController Extends Controller {
 
+
+	/************************************************************
+	Inserts into check_in table
+	*************************************************************/
+
 	public function newCheckin(){
 		//Insert statement for check in's//
 		$check_in = new Checkin();
@@ -21,14 +26,6 @@ class CheckinController Extends Controller {
 		$check_in_id = $check_in->save();
 
 		$check_in_id = new Checkin($check_in_id);
-
-		//$return_data = new DashboardController;
-		//$return_data->viewDash();
-
-
-		//return ['date' => '2015-30-03', 'goal_pounds' => '2.67', 'actual_pounds' => '5'];
-
-
 	
 		return redirect('dashboard');
 	}

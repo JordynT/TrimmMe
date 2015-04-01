@@ -31,6 +31,12 @@ body {
       position: fixed;
       right: 5px;
       top: 15px; }
+      .page > header .user span.logo {
+        font-family: Gruppo;
+        font-size: 1.5em; }
+        .page > header .user span.logo a.logo {
+          text-decoration: none;
+          color: #104C4C; }
 
 .primary-menu {
   position: fixed;
@@ -219,6 +225,10 @@ signup
   background-repeat: no-repeat;
   background-position: center; }
 
+a.cancel {
+  text-decoration: none;
+  color: #104C4C; }
+
 /***************************
 New Plan
 ***************************/
@@ -237,10 +247,15 @@ Adjust Plan
 Adjust Plan
 ***************************/
 .about-us {
-  background-color: pink;
-  padding-top: 10px; }
+  padding-top: 10px;
+  min-height: 300px; }
   .about-us > p.about {
-    width: 75%;
+    width: 80%;
+    max-width: 650px;
     min-height: 120px;
     margin: 0 auto;
-    background-color: yellow; }
+    padding: 5px;
+    text-align: justify;
+    color: #5EA3A3;
+    text-shadow: 0 1px rgba(92, 89, 89, 0.96);
+    background-color: rgba(221, 221, 221, 0.5); }

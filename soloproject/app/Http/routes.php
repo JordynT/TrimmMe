@@ -22,17 +22,6 @@ Route::get('/about', function(){
 	return view('about');
 });
 
-// Route::get('home', 'HomeController@index');
-
-
-
-/********************
-	TEST
-*********************/
-
-Route::get('/test', 'DashboardController@viewDash');
-
-
 
 //NEW PLAN//
 
@@ -60,9 +49,7 @@ Route::get('/adjustPlan', 'PlanController@viewAdjustPlan');
 Route::get('/insertAdjustPlan', 'PlanController@insertAdjustPlan');
 
 
-
-
-// Route::get('home', 'HomeController@index');
+//Auth//
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

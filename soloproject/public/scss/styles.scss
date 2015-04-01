@@ -52,8 +52,17 @@ body {
 			position: fixed;
   			right: 5px;
   			top: 15px;
-		}
 
+  			span.logo{
+			font-family: $logo_font;
+		 	font-size: 1.5em;
+				
+				a.logo{
+					text-decoration: none;
+					color: $dark_color;
+				}
+ 			}
+		}
 	}
 }
 
@@ -112,7 +121,6 @@ body {
 		left:15px;
 		right: 15px;
 		min-height: 175px;
-		//background-image: "/images/calendar.jpg";
 	}
 
 }
@@ -230,12 +238,10 @@ Home/Login
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
-	//background-color: pink;
 	border: 4px solid #000;
 	border-radius: 2px;
 
 	> header {
-		//background-color: orange;
 		min-height: 60px;
 		max-width: 600px;
 		margin: 0 auto;
@@ -321,6 +327,11 @@ signup
 
 }
 
+a.cancel{
+	text-decoration: none;
+	color: $dark_color;
+}
+
 /***************************
 New Plan
 ***************************/
@@ -349,13 +360,18 @@ Adjust Plan
 ***************************/
 
 .about-us {
-	background-color: pink;
 	padding-top: 10px;
+	min-height: 300px;
 
 	> p.about {
-		width: 75%;
+		width: 80%;
+		max-width: 650px;
 		min-height: 120px;
 		margin: 0 auto;
-		background-color: yellow;
+		padding: 5px;
+		text-align: justify;
+		color: $middle_blue;
+		text-shadow: 0 1px rgba(92, 89, 89, 0.96);
+		background-color: rgba(221, 221, 221, .5);
 	}
 }

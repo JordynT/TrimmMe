@@ -65,9 +65,9 @@
 			<div class="user">
 				@if(Auth::user())
 				<i class="fa fa-user"></i>
-				<span>{{Auth::user()->first_name}}</span>
+				<span class="user-name">{{Auth::user()->first_name}}</span>
 				@else
-				<span>TrimmMe</span>
+				<span class="logo"><a class="logo" href="/">TrimmMe</a></span>
 				@endif
 			</div>
 		</header>

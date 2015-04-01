@@ -5,22 +5,28 @@ use Auth;
 use App\Models\Plan;
 use App\Models\AdjustPlan;
 use App\Models\Checkin;
-// use App\Models\User;
 use App\User;
 
 class PlanController Extends Controller {
 
-
+	/************************************************************
+	Redirection if guest
+	*************************************************************/
 	public function __construct(){
 		$this->middleware('auth');
 	}
 
-
+	/************************************************************
+	Shows newplan view 
+	*************************************************************/
 	public function view(){
 		return view('newPlan');
 	}
 	
 
+	/************************************************************
+	New plan method: will delete if already existing as well as insert
+	*************************************************************/
 	public function newPlan() {
 		//deletes info. if it exists in plan table
 		$user_id = Request::input('user_id');
@@ -52,6 +58,9 @@ class PlanController Extends Controller {
 	}
 
 
+	/************************************************************
+	Retrieves plan information and sends view
+	*************************************************************/
 	public function viewAdjustPlan() {
 		$user_id = Auth::user()->user_id;
 
@@ -61,6 +70,9 @@ class PlanController Extends Controller {
 	}
 
 
+	/************************************************************
+	insert statement
+	*************************************************************/
 	public function insertAdjustPlan() {
 		$plan_id = Request::input('plan_id');
 
@@ -74,7 +86,7 @@ class PlanController Extends Controller {
 		$plan_adjust->num_days = Request::input("num_days");
 		$plan_adjust_id = $plan_adjust->save();
 
-		return ('dashboard');
+		return redirect('dashboard');
 	}
 
 }	
