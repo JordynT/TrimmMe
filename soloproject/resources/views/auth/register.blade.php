@@ -59,7 +59,7 @@
 				<input type="text" name="rmr" class="rmr" placeholder="Resting Metabolic Rate" value="{{ old('zip_code') }}">
 			</div>
 		</div>
-		<button>Sign up!</button>
+		<button class="button login-button">Sign up!</button>
 	</form>
 	<a class="cancel" href="/">cancel</a>
 

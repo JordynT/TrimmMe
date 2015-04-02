@@ -66,20 +66,17 @@
 		<input type="hidden" class="plan-id" name="plan_id" value="{{$plan->plan_id}}">
 		<div class="dial">
 			<div> 
-				<header>Input your caloric intake since your last entry</header>
-				<input type="text" name="caloric_intake" value="20" class="knob caloric-intake" data-width="170"
-				data-thickness=".3" data-step="10" data-min="20" data-max="1500" data-cursor=true        data-fgColor="#88CCCC" data-bgColor="#104C4C">
+				<header class="bubble">Input your caloric intake since your last entry</header>
+				<input type="text" name="caloric_intake" value="20" class="knob caloric-intake" data-width="320" data-height="320" data-thickness=".35" data-step="10" data-min="20" data-max="1500" data-cursor=true data-fgColor="rgb(34, 255, 238)" data-bgColor="rgb(109, 229, 106)" data-linecap=round>
 			</div>
 		</div>
 		<div class="dial">
 			<div> 
-				<header>Input your caloric expenditure since your last entry</header>
-				<input type="text" name="caloric_output" value="20" class="knob caloric-output" data-width="170"
-				data-thickness=".3" data-step="10" data-min="20" data-max="1000" data-cursor=true 
-				data-fgColor="#88CCCC" data-bgColor="#104C4C">
+				<header class="bubble other">Input your caloric expenditure since your last entry</header>
+				<input type="text" name="caloric_output" value="20" class="knob caloric-output" data-width="320" data-height="320" data-thickness=".35" data-step="10" data-min="20" data-max="1000" data-cursor=true data-fgColor="rgb(34, 255, 238)" data-bgColor="rgb(109, 229, 106)" data-linecap=round>
 			</div>
 		</div>
-		<button>Submit</button>
+		<button class="button">Submit</button>
 	</form>
 </div>
 

@@ -84,7 +84,7 @@ class DashboardController Extends Controller {
 						'day' => $day,
 						'goal_pounds' => $goal_pounds,
 						'actual_pounds' => $this->getActualPounds($this_date, $checkin_array)
-						];
+			];
 
 			//Add goal pounds to eachother to add them together through each loop
 			$cumGoalPounds = $cumGoalPounds + $goal_pounds;
@@ -102,7 +102,11 @@ class DashboardController Extends Controller {
 
 		}
 
-		return view('dashboard', ['Cummulitive' => $Cummulitive, 'plan' => $plan, 'plan_adjustment' => $plan_adjustment ]);
+		return view('dashboard', [
+			'Cummulitive' => $Cummulitive, 
+			'plan' => $plan, 
+			'plan_adjustment' => $plan_adjustment
+		]);
 	}
 
 
@@ -143,8 +147,7 @@ class DashboardController Extends Controller {
 		}
 
 		return $actual_pounds;
-
-		}
+	}
 
 
 	/************************************************************
@@ -155,7 +158,6 @@ class DashboardController Extends Controller {
 		$date = date('Y-m-d',strtotime($start_date) + (24*3600*$day));
 
 		return $date; 
-
 	}
 
 

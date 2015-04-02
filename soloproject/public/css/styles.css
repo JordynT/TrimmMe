@@ -5,7 +5,12 @@ Variables
 Every Page CSS
 ****************************************************/
 body {
-  font-family: Numans; }
+  font-family: Numans;
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0.21), #fff), url('/images/background.jpg');
+  background: radial-gradient(rgba(255, 255, 255, 0.21), #fff), url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
 
 .page {
   padding: 2px;
@@ -17,16 +22,16 @@ body {
     right: 0;
     height: 50px;
     z-index: 1001;
-    background-color: rgba(221, 221, 221, 0.5); }
+    background-color: rgba(253, 253, 253, 0.59); }
     .page > header .menu, .page > header .location, .page > header .user {
       display: inline-block;
-      color: #104C4C; }
+      color: #22C4FF; }
     .page > header .menu {
       margin-top: 15px; }
       .page > header .menu .show-menu {
         margin: 10px;
         text-decoration: none;
-        color: black; }
+        color: #222; }
     .page > header .user {
       position: fixed;
       right: 5px;
@@ -36,7 +41,7 @@ body {
         font-size: 1.5em; }
         .page > header .user span.logo a.logo {
           text-decoration: none;
-          color: #104C4C; }
+          color: #22C4FF; }
 
 .primary-menu {
   position: fixed;
@@ -52,7 +57,7 @@ body {
   -ms-transform: translateX(-375px);
   transform: translateX(-375px);
   z-index: 1000;
-  background-color: rgba(47, 45, 45, 0.9); }
+  background-color: rgba(4, 160, 0, 0.69); }
   .primary-menu .nav:first-child {
     margin-top: 12px; }
   .primary-menu .nav:last-child {
@@ -63,18 +68,19 @@ body {
     margin: 0;
     margin-left: 10px;
     padding-top: 12px;
-    border-top: 1px solid #aaa; }
+    border-top: 1px solid #eee;
+    font-size: 1.2em; }
     .primary-menu > .nav > i {
       margin-left: 5px;
-      color: #aaa; }
+      color: #eee; }
     .primary-menu > .nav > span {
-      color: #aaa; }
+      color: #eee; }
     .primary-menu > .nav a {
       text-decoration: none;
-      color: #aaa; }
+      color: #eee; }
   .primary-menu .nav:hover {
-    background-color: rgba(113, 110, 110, 0.9);
-    border-top: 1px solid #88CCCC; }
+    background-color: rgba(123, 255, 120, 0.47);
+    border-top: 1px solid #22C4FF; }
   .primary-menu .calendar {
     position: fixed;
     bottom: 10px;
@@ -87,6 +93,21 @@ body {
   -ms-transform: translateX(0);
   transform: translateX(0); }
 
+.button {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  min-height: 54px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 25px;
+  font-size: 1.4em;
+  color: #eee;
+  background-color: #22C4FF; }
+
+.login-button {
+  margin-top: 10px; }
+
 /***************************
 Dashboard
 ***************************/
@@ -96,53 +117,60 @@ Dashboard
   margin-top: 50px;
   min-height: 375px; }
   .graph .table {
-    border: 4px solid black; }
+    border: 4px solid #222; }
 
 .information {
   min-height: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: rgba(221, 221, 221, 0.8);
+  background-color: #fff;
   text-align: center;
   font-size: .9em; }
   .information > .info {
     margin-bottom: 15px; }
     .information > .info > span {
-      color: #104C4C;
+      color: #008B80;
       font-size: 2em; }
     .information > .info > .plan-info {
       margin: 0;
       color: rgba(0, 0, 0, 0.8);
       margin-bottom: 5px; }
       .information > .info > .plan-info > strong {
-        color: #5EA3A3; }
+        color: #02D5C5; }
       .information > .info > .plan-info p {
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        color: #222; }
 
 .dials {
   min-height: 400px;
   padding-top: 10px; }
-  .dials button {
-    display: block;
-    margin: 0 auto; }
 
 .dials > * + * {
-  margin-top: 10px; }
+  margin-top: 20px; }
 
 .dial {
   min-height: 100px;
   margin-bottom: 10px; }
   .dial > div {
-    width: 170px;
+    width: 350px;
     margin: 0 auto;
     padding-top: 20px; }
-    .dial > div > header {
+    .dial > div header.bubble {
       margin-bottom: 5px;
+      border-radius: 3px;
+      padding: 10px;
       text-align: center;
-      border-radius: 2px;
-      background-color: rgba(137, 136, 136, 0.71); }
-    .dial > div input.knob {
-      outline: none; }
+      color: #222;
+      background-color: rgba(255, 246, 246, 0.24);
+      position: relative;
+      border-radius: 5px;
+      box-shadow: -2px 0px 10px 0px rgba(97, 97, 97, 0.31); }
+  .dial input.knob {
+    outline: none; }
 
 /***************************
 Home/Login
@@ -150,7 +178,7 @@ Home/Login
 .welcome-image {
   margin-top: 50px;
   min-height: 200px;
-  background-image: url("/images/signup-image.jpg");
+  background-image: url("/images/signup-image1.jpg");
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -163,14 +191,14 @@ Home/Login
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  border: 4px solid #000;
   border-radius: 2px; }
   .login > header {
     min-height: 60px;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 10px;
-    color: #5EA3A3; }
+    color: #22C4FF;
+    text-shadow: .5px 1px rgba(92, 89, 89, 0.26); }
     .login > header > h2 {
       margin: 0; }
     .login > header > span {
@@ -180,18 +208,17 @@ Home/Login
 .form {
   max-width: 400px;
   margin: 0 auto;
-  border: 1px solid #ccc;
-  background-color: #eee;
+  border: 1px solid #22C4FF;
   border-radius: 2px;
   overflow: hidden; }
   .form div.input {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #fff;
+    border-top: 1px solid #22C4FF;
+    border-bottom: 1px solid #ccc;
     padding: 12px 4px 12px 5px; }
   .form div.input:first-child {
     border-top: none; }
   .form div.input:hover i {
-    color: #5EA3A3; }
+    color: #20FF1A; }
   .form div.input i {
     color: #aaa; }
   .form div.input input {
@@ -204,16 +231,9 @@ Home/Login
     float: right;
     color: #222; }
 
-button {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 10px;
-  min-height: 50px;
-  background-color: #88CCCC; }
-
 a.forgot-password {
   text-decoration: none;
-  color: #104C4C; }
+  color: #22C4FF; }
 
 /***************************
 signup
@@ -221,13 +241,14 @@ signup
 .common-image {
   margin-top: 50px;
   min-height: 300px;
-  background-image: url("/images/register.jpg");
+  border-radius: 20px;
+  background-image: url("/images/register1.jpg");
   background-repeat: no-repeat;
   background-position: center; }
 
 a.cancel {
   text-decoration: none;
-  color: #104C4C; }
+  color: #22C4FF; }
 
 /***************************
 New Plan
@@ -240,11 +261,11 @@ Adjust Plan
   padding-top: 20px;
   text-align: center; }
   .current-plan > span {
-    color: #104C4C;
+    color: #222;
     font-size: 2em; }
 
 /***************************
-Adjust Plan
+About Us
 ***************************/
 .about-us {
   padding-top: 10px;
@@ -256,6 +277,6 @@ Adjust Plan
     margin: 0 auto;
     padding: 5px;
     text-align: justify;
-    color: #5EA3A3;
+    color: #22C4FF;
     text-shadow: 0 1px rgba(92, 89, 89, 0.96);
     background-color: rgba(221, 221, 221, 0.5); }

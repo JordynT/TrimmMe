@@ -37,7 +37,7 @@
 				<input type="password" name="password" class="password" placeholder="Password">
 			</div>
 		</div>
-		<button>Login</button><br>
+		<button class="button login-button">Login</button><br>
 		<a class="forgot-password" href="{{ url('/password/email') }}">Forgot Your Password?</a>
 	</form>
 </div>
